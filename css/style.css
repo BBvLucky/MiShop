@@ -1,0 +1,53 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/*шапка*/
+
+.header {
+    height: 100px;
+    background-color: #2f4f4f;
+    margin-bottom: 50px;
+    color: #fffafa;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+/*контент*/
+
+div[class^=col] {
+    height: 420px;
+    position: relative;
+}
+
+.block {
+    width: 320px;
+    border: 1px solid #000;
+    height: 370px;
+    position: absolute;
+    left: 50%;
+    margin-left: -160px;
+}
+
+.blockHover {
+    width: 320px;
+    height: 370px;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+.blockHover:hover {
+    opacity: 1;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
