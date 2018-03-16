@@ -20,12 +20,16 @@ html {
     height: 100%;
     width: 1200px;
     margin: 0 auto;
-    margin-top: 200px;
+    margin-top: 50px;
 }
 
 .content {
     flex: 1 0 auto;
     background-color: #f8f8f8;
+}
+
+img {
+    outline: none;
 }
 
 .crl {
@@ -43,6 +47,11 @@ html {
 
 .logo {
     float: left;
+    margin-left: 10px;
+}
+
+.logo a {
+    outline: none;
 }
 
 .menu {
@@ -64,6 +73,7 @@ html {
     display: block;
     text-decoration: none;
     color: darkgray;
+    outline: none;
 }
 
 .menu li a:hover {
@@ -112,6 +122,12 @@ html {
     vertical-align: middle;
 }
 
+/*главная*/
+
+.welcome {
+    padding-left: 30px;
+}
+
 /*каталог*/
 
 .product {
@@ -121,9 +137,9 @@ html {
     height: 400px;
     box-shadow: 7px 7px 20px black;
     border-radius: 10px;
-    margin: 30px
+    margin-left: 75px;
+    margin-bottom: 75px;
 }
-
 
 .product a {
     display: block;
@@ -131,11 +147,9 @@ html {
     font-size: 1.5em;
     color: white;
     text-decoration: none;
-}
-
-.product_sign {
-    height: 100px;
-    width: 300px;
+    height: 100%;
+    width: 100%;
+    outline: none;
 }
 
 .product a:hover {
@@ -171,6 +185,8 @@ html {
     color: white;
     font-size: 1.2em;
     clear: both;
+    margin-left: 30px;
+    outline: none;
 }
 
 .buy:hover {
@@ -214,7 +230,7 @@ h3 {
 /*контакты*/
 
 iframe {
-    width: 870px;
+    width: 810px;
     height: 390px;
 }
 
@@ -227,6 +243,8 @@ iframe {
     background-color: #f9f9f9;
     float: left;
     margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 75px;
 }
 
 .form-header {
@@ -236,7 +254,7 @@ iframe {
     border-top-left-radius: 10px;
     padding-left: 20px;
     line-height: 40px;
-    color: #f9f9f9;
+    color: #f1f1f1;
     background-color: #ff4a00;
 }
 
@@ -281,29 +299,24 @@ iframe {
     border: 1px solid darkgray;
 }
 
-.button:focus,
-a:focus {
-    outline: none;
-}
-
 .button {
-    font-weight: bold;
-    color: #f9f9f9;
-    background-color: #707070;
+    color: #f1f1f1;
+    background-color: #ff4a00;
     width: 130px;
     height: 30px;
-    border-radius: 5px;
-    border: 1px solid black;
-    box-shadow: 1px 1px 7px black;
+    border-radius: 10px;
+    box-shadow: 3px 3px 13px black;
+    outline: none;
+    border: none;
 }
 
 .button:hover {
-    background-color: #444;
-    color: white;
+    color: #333;
 }
 
 .button:active {
     box-shadow: none;
+    color: black;
 }
 
 /*футер*/
@@ -312,7 +325,7 @@ a:focus {
     flex: 0 0 auto;
     margin: 0 auto;
     width: 1200px;
-    height: 200px;
+    height: 100px;
     background-color: #333;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -322,5 +335,5 @@ a:focus {
     color: #f9f9f9;
     text-align: right;
     margin-right: 50px;
-    margin-top: 50px;
+    margin-top: 10px;
 }
