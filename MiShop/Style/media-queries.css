@@ -1,0 +1,18 @@
+@media screen and (max-width: 1080px) {
+    .container,.footer {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .search_body {
+        width: 100%;
+    }
+    .search_line {
+        width:  93%;
+    }
+    .search {
+        width: 95%;
+    }
+    body {
+        background-image: inherit;
+    }
+}
