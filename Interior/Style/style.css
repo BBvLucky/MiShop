@@ -556,3 +556,15 @@ img[alt="featur_prod_1_prev"] {
     font-weight: 700;
     padding-left: 178px;
 }
+
+.back {
+    text-align: right;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.back:hover:before {
+    content: "<< ";
+}

@@ -337,3 +337,14 @@ iframe {
     margin-right: 50px;
     margin-top: 10px;
 }
+
+.back {
+    text-align: right;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+
+.back:hover:before {
+    content: "<< ";
+}
