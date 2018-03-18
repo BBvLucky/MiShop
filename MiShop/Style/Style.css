@@ -339,6 +339,7 @@ iframe {
 }
 
 .back {
+    display: block;
     text-align: right;
     background-color: white;
     text-decoration: none;

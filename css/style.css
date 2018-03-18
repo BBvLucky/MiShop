@@ -23,17 +23,14 @@ html, body {
 
 div[class^=col] {
     height: 420px;
-    position: relative;
 }
 
 .block {
     width: 320px;
     height: 370px;
-    position: absolute;
-    left: 50%;
-    margin-left: -160px;
+    margin: 0 auto;
     padding: 10px;
-    box-shadow: 1px 1px 10px 1px;
+    box-shadow: 2px 2px 15px 2px;
     text-align: center;
 }
 
@@ -55,10 +52,11 @@ div[class^=col] {
 .block:hover {
     transition: 0.5s;
     transform: scale(1.1);
-    box-shadow: 0px 30px 70px -20px black;
+    box-shadow: 0px 30px 70px -20px;
 }
 
 .block:hover p {
+    transition: 0.5s;
     opacity: 1;
 }
 
