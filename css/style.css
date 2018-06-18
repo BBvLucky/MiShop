@@ -4,6 +4,10 @@ html, body {
     height: 100%;
 }
 
+.container-fluid {
+    padding: 0;
+}
+
 /*head*/
 
 .header {
@@ -17,6 +21,7 @@ html, body {
 
 .header h1 {
     margin: 0;
+    margin-left: 3%;
 }
 
 /*content*/
