@@ -1,0 +1,24 @@
+.partner-section {
+    max-width: $width;
+    min-width: $container-width;
+    margin: 0 auto;
+    background-image: url('../img/partner-section-background.jpg');
+    padding-top: 140px;
+    padding-bottom: 135px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &-logo {
+        margin-right: 90px;
+        transition: transform 0.2s;
+        
+        &:last-child {
+            margin: 0;
+        }
+        
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
