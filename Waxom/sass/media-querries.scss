@@ -262,7 +262,11 @@
         
         input[type="search"] {
             height: 30px;
-            width: 80%
+            width: 80%;
+            
+            &:focus {
+                width: 80%;
+            }
         }
     }
     

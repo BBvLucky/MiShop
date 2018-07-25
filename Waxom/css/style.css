@@ -1754,6 +1754,9 @@
     height: 30px;
     width: 80%;
   }
+  .header-main input[type="search"]:focus {
+    width: 80%;
+  }
 
   .advantages-wrapper {
     -webkit-box-orient: horizontal;
