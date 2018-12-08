@@ -160,15 +160,21 @@
                 & a {
                     text-decoration: none;
                     color: white;
-
+                    
+                    &:hover {
+                        color: $color-black-opacity;
+                    }
+                    
                     @media (min-width: 1200px) {
                         border-bottom: 2px solid transparent;
                         padding: 0 10px 0 10px;
 
                         &:hover {
                             border-color: white;
+                            color: white;
                         }
                     }
+
                 }
             }
         }
