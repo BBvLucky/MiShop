@@ -11,7 +11,7 @@ $(document).ready(function () {
     })
 
     //Анимация "якорей"
-    $('a[href^="#"]').on('click', function (e) {
+    $('.jq-anchor').on('click', function (e) {
         e.preventDefault();
         let scroll = $(this).attr('href'),
             top = $(scroll).offset().top;
