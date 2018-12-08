@@ -1,57 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Главная</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/css.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Портфолио</h1>
+    <header class="header" id="home">
+        <div class="header-bgimg"></div>
+        <nav class="header-nav">
+            <div class="header-nav-menu-btn">
+                <div class="middle"></div>
+            </div>
+            <ul class="header-nav-link toggle">
+                <li><a href="#home">Домой</a></li>
+                <li><a href="#portfolio">Портфолио</a></li>
+                <li><a href="#about">О себе</a></li>
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+        <h3 class="header-caption">здравствуйте, я</h3>
+        <h1 class="header-caption-main">frontend-разработчик</h1>
+        <h3 class="header-caption">добро пожаловать</h3>
+        <a href="#about" class="header-btn-link">></a>
+
+    </header>
+    <section class="portfolio" id="portfolio">
+        <h3 class="portfolio-caption">портфолио</h3>
+        <p class="portfolio-text">Работы представлены в порядке создания, это отлично передаёт путь развития</p>
+        <a href="./catalogue/mishop/index.html" class="portfolio-card">
+            <img src="img/portfolio-cards/mishop.JPG" alt="MiShop">
+            <h3 class="portfolio-card-caption">Интернет-магазин. Без макета.</h3>
+            <p class="portfolio-card-text">HTML+CSS, адаптивный</p>
+        </a>
+        <a href="./catalogue/interior/index.html" class="portfolio-card">
+            <img src="img/portfolio-cards/interior.JPG" alt="Interior" width="470">
+            <h3 class="portfolio-card-caption">Интернет-магазин. PSD-макет</h3>
+            <p class="portfolio-card-text">HTML+CSS, фиксированный</p>
+        </a>
+        <a href="#" class="portfolio-card">
+            <img src="./img/portfolio-cards/js-works.jpg" alt="js-works">
+            <h3 class="portfolio-card-caption">Простенькие поделки на JS</h3>
+            <p class="portfolio-card-text">HTML+CSS+JS</p>
+        </a>
+        <a href="./catalogue/rc-hobby/index.html" class="portfolio-card">
+            <img src="img/portfolio-cards/rchobby.JPG" alt="RC Hobby" width="470">
+            <h3 class="portfolio-card-caption">Интернет-магазин. Без макета</h3>
+            <p class="portfolio-card-text">HTML+CSS3, адаптивный, моб. версия</p>
+        </a>
+        <a href="./catalogue/product/index.html" class="portfolio-card">
+            <img src="img/portfolio-cards/product-name.JPG" alt="product" width="470">
+            <h3 class="portfolio-card-caption">PSD-макет</h3>
+            <p class="portfolio-card-text">HTML 5 + CSS 3, фиксированный</p>
+        </a>
+        <a href="./catalogue/waxom/index.html" class="portfolio-card">
+            <img src="img/portfolio-cards/waxom.JPG" alt="Waxom" width="470">
+            <h3 class="portfolio-card-caption">PSD-макет</h3>
+            <p class="portfolio-card-text">HTML 5 + CSS 3(SASS), адаптивный/резиновый, моб. версия, SVG (возможны
+                артефакты в браузерах IE и Edge)</p>
+        </a>
+        <a href="./catalogue/react-app/index.html" class="portfolio-card">
+            <img src="#" alt="React" width="470">
+            <h3 class="portfolio-card-caption">React приложение</h3>
+            <p class="portfolio-card-text">HTML 5 + CSS 3(SASS), React</p>
+        </a>
+        <div class="portfolio-show-more">
+            <p>показать все</p>
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="block">
-                    <a href="MiShop/index.html"><img src="MiShop/Logo/Logo.png" alt="mishop">
-               <p>Первый сайт, созданный на базе интерактивного видео-курса.<br>
-               HTML5+CSS3 <br> Адаптивный</p></a>
-                </div>
+    </section>
+    <section class="about" id="about">
+        <h3 class="about-caption">о&nbsp;себе</h3>
+        <img src="img/me.png" alt="Я" class="about-img">
+        <p class="about-text">Здравствуйте, меня зовут Ираклий, мне 24. Изучение веб-разработки начал совсем недавно.
+            До&nbsp;этого никакого опыта в&nbsp;сфере&nbsp;IT не&nbsp;имел.</p>
+        <p class="about-text">За&nbsp;это время успел сверстать несколько несложных сайтов, освоил HTML 5,
+            CSS3, SASS, Webpack, jQuery, JavaScript и&nbsp;React. Знаком с&nbsp;Vue</p>
+        <p class="about-text">В&nbsp;настоящее время, продолжаю набивать руку, улучшая и&nbsp;совершунтсвуя свои
+            навыки. Изучая что-нибудь новое.</p>
+        <p class="about-text">Примеры моих работ и&nbsp;их&nbsp;описание&nbsp;Вы можете посмотреть во&nbsp;вкладке <a
+                href="#portfolio" class="about-text-link"><span class="about-text-link-item">&laquo;Портфолио&raquo;</span></a></p>
+    </section>
+    <section class="skills" id="skills">
+        <h3 class="skills-caption">навыки</h3>
+
+        <div class="skills-wrapper">
+            <span class="skills-item">HTML</span>
+            <div class="skills-progressbar">
+                <div class="skills-progressbar-bar">80</div>
             </div>
-            <div class="col-md-4">
-                <div class="block">
-                    <a href="Interior/index.html"><img src="img/logo.png" alt="interior">
-               <p>Пример нарезки из psd-макета <br> HTML+CSS <br> Фиксированные значения</p></a>
-                </div>
+    
+            <span class="skills-item">CSS</span>
+            <div class="skills-progressbar">
+                <div class="skills-progressbar-bar">85</div>
             </div>
-            <div class="col-md-4">
-                <div class="block">
-                    <a href="BlackJack/index.html"><img src="img/BlackJack.png" alt="blackJack">
-              <p>Простенькая игра на JavaScript</p></a>
-                </div>
+    
+            <span class="skills-item">jQuery</span>
+            <div class="skills-progressbar">
+                <div class="skills-progressbar-bar">40</div>
             </div>
-            <div class="col-md-4">
-                <div class="block">
-                    <a href="RCHobby/index.html"><img src="img/rcHobby.png" alt="rcHobby">
-               <p>Первая работа по курсу "Frontend-разработчик" <br> HTML5+CSS3 <br> Адаптивный <br> Есть мобильная версия </p></a>
-                </div>
+    
+            <span class="skills-item">jQueryUI</span>
+            <div class="skills-progressbar">
+                <div class="skills-progressbar-bar">30</div>
             </div>
-            <div class="col-md-4">
-                <div class="block">
-                    <a href="Waxom/index.html">
-                    <img src="Waxom/img/logo.svg" alt="waxom"> <p>HTML5+CSS3(SASS) <br> Адаптивный <br> "Резиновый" <br>Использована SVG-графика, возможны артефакты в браузера IE и Edge</p>  </a>
-                </div>
+    
+            <span class="skills-item">JavaScript</span>
+            <div class="skills-progressbar">
+                <div class="skills-progressbar-bar">25</div>
             </div>
-            <div class="col-md-4">
-                <div class="block">
-                    <h3>В разработке</h3>
-                    <p>В поисках новых идей, решений.</p>
-                </div>
+    
+            <span class="skills-item">Webpack</span>
+            <div class="skills-progressbar">
+                <div class="skills-progressbar-bar">75</div>
+            </div>
+    
+            <span class="skills-item">ReactJS</span>
+            <div class="skills-progressbar">
+                <div class="skills-progressbar-bar">60</div>
+            </div>
+            
+            <span class="skills-item">VueJS</span>
+            <div class="skills-progressbar">
+                <div class="skills-progressbar-bar" id="vue">10</div>
             </div>
         </div>
-    </div>
+        
+    </section>
+    <section class="contacts" id="contacts">
+        <h3 class="contacts-caption">контакты</h3>
+        <div class="contacts-wrapper">
+            <span class="contacts-phone">Тел.: 8 930 813 03 99</span> <br>
+            <span class="contacts-email">Почта: <a href="mailto:bbvlucky@gmail.com" class="contacts-email-link">bbvlucky@gmail.com</a></span>
+            <div class="contacts-link-wrapper">
+                <a href="https://t.me/bblucky" class="contacts-link"><i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://vk.com/bblucky" class="contacts-link"><i class="fab fa-vk"></i></a>
+                <a href="https://github.com/BBvLucky" class="contacts-link"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script src="scripts/jq-script.js"></script>
 </body>
+
 </html>

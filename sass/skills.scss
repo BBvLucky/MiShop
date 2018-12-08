@@ -1,0 +1,55 @@
+.skills {
+    background-color: $color-bg-white;
+    padding: 45px 20px 20px 20px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    @media (min-width: 576px) {
+        padding: 45px 50px 20px 50px;
+    }
+
+    @media (min-width: 768px) {
+        padding: 45px 60px 20px 60px;
+    }
+
+    @media (min-width: 1200px) {
+        min-width: 1200px;
+        max-width: 1920px;
+        padding: 50px 0 60px 0;
+
+        &-wrapper {
+            width: 1000px;
+            margin: 0 auto;
+        }
+    }
+
+
+    &-caption {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.7em;
+        color: $color-black-opacity;
+        font-weight: 600;
+    }
+
+    &-item {
+        color: $color-black-opacity;
+        font-weight: 600;
+    }
+
+    &-progressbar {
+        height: 26px;
+        width: 100%;
+        background-color: lighten($color-main, 30%);
+        margin: 5px 0px 16px 0px;
+
+        &-bar {
+            background-color: $color-main;
+            width: 0;
+            height: 100%;
+            text-align: right;
+            line-height: 26px;
+        }
+    }
+}

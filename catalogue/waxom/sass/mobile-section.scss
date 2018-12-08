@@ -1,0 +1,72 @@
+.mobile-section {
+    max-width: $width;
+    min-width: $container-width;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 79px;
+    background-color: #fbfaf8;
+    
+    &-phone-img {
+        margin: 0;
+        height: 616px;
+    }
+    
+    &-advantages {
+        width: 657px;
+        margin-top: 116px;
+        margin-left: 29px;
+        
+        &-caption {
+            color: $color-black;
+            font-family: raleway-semi-bold, verdana;
+            font-size: 30px;
+            font-weight: 600;
+            padding-left: 2px;
+        }
+        
+        &-text {
+            margin-bottom: 40px;
+            margin-bottom: 45px;
+            color: $color-gray;
+            font-family: montserrat-light, verdana;
+            font-size: 16px;
+            font-weight: 300;
+        }
+        
+        &-list {
+            list-style-type: none;
+            color: $color-gray;
+            font-family: montserrat-light, verdana;
+            font-size: 16px;
+            font-weight: 300;
+            padding-left: 100px;
+            
+            & li {
+                position: relative;
+                margin-bottom: 16px;
+            }
+            
+            & li:before {
+                content: ">";
+                color: $color-white;
+                font-family: montserrat-regular, verdana;
+                display: block;
+                font-size: 16px;
+                text-align: center;
+                width: 21px;
+                padding-top: 1.5px;
+                padding-bottom: 1.5px;
+                background-color: $color-hover;
+                @include border-radius(50%);
+                position: absolute;
+                top: -5px;
+                left: -29px;
+            }
+            
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}

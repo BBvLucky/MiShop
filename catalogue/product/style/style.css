@@ -1,0 +1,553 @@
+body {
+    margin: 0;
+    background-color: #f8f8f8;
+}
+
+main {
+    width: 1280px;
+    margin: 0 auto;
+    font-family: arial;
+    background-color: white;
+    min-height: calc(100vh - 534px);
+    background-color: #fff;
+}
+
+/*шапка*/
+
+header {
+    background-color: #445162;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+h1:first-letter,
+h2:first-letter,
+h3:first-letter {
+    text-transform: capitalize;
+}
+
+h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 60px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    font-family: arial;
+}
+
+.productDesc {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400px;
+    line-height: 36px;
+    list-style-image: url(../ico/check_icon.png);
+    margin: 0;
+}
+
+
+/*о продукте*/
+
+.aboutProductContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.aboutProduct {
+    width: 649px;
+}
+
+.aboutProduct p {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h2 {
+    color: #445161;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0;
+}
+
+/*плюсы продукта*/
+
+.productPlusContainer {
+    padding: 50px;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.productPlusContainer h2 {
+    text-align: center;
+    color: #445161;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    font-family: arial;
+    width: 100%;
+    margin-bottom: 29px;
+}
+
+.details-wrapper {
+    width: 580px;
+}
+
+details p {
+    margin: 0;
+    margin-bottom: 5px;
+    padding-left: 37px;
+}
+
+summary {
+    cursor: pointer;
+    display: block;
+    width: 580px;
+    float: left;
+    margin-top: 35px;
+    position: relative;
+    padding-left: 37px;
+    outline: none;
+}
+
+summary::-webkit-details-marker {
+    display: none
+}
+
+summary:after {
+    background-image: url(../ico/plus_icon.png);
+    content: "";
+    float: left;
+    width: 32px;
+    height: 32px;
+    float: left;
+    margin-right: 5px;
+    position: absolute;
+    left: 0;
+}
+
+details[open] summary:after {
+    background: url(../ico/plus_icon_minus.png);
+}
+
+/*скриншоты*/
+
+.screenshotsContainer {
+    padding: 50px;
+    width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.screenshotsContainer:last-child:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.screenshots {
+    width: 580px;
+    float: left;
+    margin: 0;
+    margin-top: 35px;
+    display: flex;
+}
+
+.screenshotsContainer h2 {
+    text-align: center;
+    color: #445161;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+.screenshots p {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 15px;
+}
+
+h3 {
+    color: #445161;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+    margin-left: 15px;
+}
+
+img[alt="product-screenshot"]:hover {
+    transform: scale(1.03);
+    transition: 0.2s;
+}
+
+/*отзывы*/
+
+.reviews-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    background-color: #f5f5f5;
+    width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.reviews-wrapper h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 35px;
+    color: #445161;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+img[alt="avatar"] {
+    border-radius: 50%;
+}
+
+.reviews {
+    display: flex;
+    justify-content: space-around;
+    width: 573px;
+}
+
+.reviews p {
+    width: 414px;
+    background-color: #ebebeb;
+    padding: 16px;
+    color: #333333;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 18px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.reviews p:before {
+    content: " ";
+    position: absolute;
+    border: 10px solid transparent;
+    border-right: 10px solid #ebebeb;
+    left: -20px;
+}
+
+.author {
+    color: #989898;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+/*карточки товара*/
+
+.sales-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px;
+    width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.sales-wrapper h2 {
+    width: 100%;
+    text-align: center;
+    color: #445161;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    margin-bottom: 29px;
+}
+
+.buy-standart,
+.buy-premium,
+.buy-lux {
+    width: 300px;
+    align-self: flex-end;
+    border-radius: 5px;
+    background-color: #445162;
+}
+
+
+.card-name {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 17px;
+    display: block;
+}
+
+.price {
+    display: block;
+    color: #445162;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 30px;
+    width: 296px;
+    background-color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.consist {
+    margin-top: 19px;
+    margin-bottom: 21px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.buy {
+    display: block;
+    border-radius: 5px;
+    background-color: #ffffff;
+    width: 260px;
+    color: #445161;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding-top: 14px;
+    padding-bottom: 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.buy:hover {
+    background-color: #649190;
+    color: #eee;
+}
+
+.buy:active {
+    background-color: #049190;
+    color: #fff;
+}
+
+/*подвал контакты*/
+
+footer {
+    background-color: #445161;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1280px;
+    margin: 0 auto;
+    font-family: arial;
+}
+
+footer h2 {
+    width: 100%;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    margin-top: 53px;
+    margin-bottom: 31px;
+}
+
+.write-us {
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.name,
+.email,
+.text {
+    border-radius: 5px;
+    height: 40px;
+    border: 0;
+    margin-bottom: 21px;
+    background-color: #fff;
+    padding-left: 10px;
+    color: #445162;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+}
+
+.text {
+    height: 170px;
+    margin-bottom: 21px;
+    resize: none;
+    padding-top: 10px;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+input::-webkit-input-placeholder {
+    color: #445162;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: arial;
+}
+
+input:-moz-placeholder {
+    color: #445162;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: arial;
+}
+
+textarea::-webkit-input-placeholder {
+    color: #445162;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: arial;
+}
+
+textarea:-moz-placeholder {
+    color: #445162;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: arial;
+}
+
+textarea:-ms-input-placeholder {
+    color: #445162;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: arial;
+}
+
+.submit {
+    border-radius: 5px;
+    background-color: #ffffff;
+    width: 140px;
+    height: 40px;
+    color: #445162;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    border: 0;
+    text-transform: uppercase;
+    margin: 0 auto;
+    margin-bottom: 49px;
+    outline: none;
+    font-family: arial;
+}
+
+.submit:hover {
+    cursor: pointer;
+    background-color: #ddd;
+}
+
+.submit:active {
+    background-color: #aaa;
+}
+
+.contacts--wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 45px;
+}
+
+.contacts {
+    margin-left: 45px;
+}
+
+.contacts p {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: arial;
+    padding-left: 30px;
+    padding-top: 8px;
+    padding-bottom: 21px;
+    margin: 0;
+}
+
+.skype {
+    background: url(../ico/skype_icon.png) no-repeat 0px 5px;
+}
+
+.icq {
+    background: url(../ico/icq_icon.png) no-repeat 0px 5px;
+}
+
+.email-p {
+    background: url(../ico/email_icon.png) no-repeat 0px 5px;
+}
+
+.phone {
+    background: url(../ico/phone_icon.png) no-repeat 0px 5px;
+}
+
+.social {
+    margin-top: 37px;
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.social a:hover {
+    transform: scale(1.1);
+}
+
+.twitter,
+.facebook,
+.in,
+.google,
+.youtube {
+    display: block;
+    width: 42px;
+    height: 42px;
+    background-image: url("../ico/social-buttons.png");
+}
+
+.twitter {
+    background-position: top left -1px;
+}
+
+.facebook {
+    background-position: top left -50px;
+}
+
+.in {
+    background-position: top left -99px;
+}
+
+.google {
+    background-position: top left -149px;
+}
+
+.youtube {
+    background-position: top right;
+}
+
+.copy {
+    width: 100%;
+    color: #445162;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    background-color: #f5f5f5;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin: 0;
+}
