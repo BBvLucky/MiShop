@@ -6,7 +6,8 @@ $(document).ready(function () {
         $('.middle').toggleClass('close');
     })
     $('.header-nav-link').on('click', function () {
-        $(this).addClass('toggle')
+        $(this).addClass('toggle');
+        $('.middle').toggleClass('close');
     })
 
     //Анимация "якорей"
