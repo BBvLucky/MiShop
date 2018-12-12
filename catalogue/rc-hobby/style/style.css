@@ -11,7 +11,7 @@ html {
 
 body {
     background-color: #eee;
-    font-family: "times new roman";
+    font-family: "Roboto", sans-serif;
 }
 
 .contentCard,
@@ -314,6 +314,7 @@ header {
 .shortDesc,
 .product form {
     opacity: 0;
+    font-size: 14px;
 }
 
 .product form {

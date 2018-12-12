@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Корзина + каталог</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="../index.html" class="menu-item">Домой</a>
+        <a href="../blackjack/index.html" class="menu-item">Black Jack (игра)</a>
+        <a href="../asteroids/index.html" class="menu-item">"Астероидиы" (игра)</a>
+        <a href="../snake/index.html" class="menu-item">"Змейка" (игра)</a>
+        <a href="#" class="menu-item">Каталог + корзина</a>
+    </header>
+    <main class="main">
+        <div class="content-description">
+            Пример каталога с возможностью добавлять товары в корзину.
+        </div>
+        <div class="content-wrapper">
+            <div class="container">
+                <h1 class="cart-caption">Корзина</h1>
+                <input type="checkbox" id="check">
+                <label for="check" class="cart">
+                    <span id="goods-number">0</span> товаров на
+                    <span id="price-count">0.00</span>р.
+                </label>
+                <div class="order-info">
+                    <label for="check" class="order-info-close">закрыть</label>
+                    <div id="order">
+                        <div class="products-order">
+                            <h3 class="products-caption"></h3>
+                            <span class="products-price order-price"></span>
+                        </div>
+                    </div>
+                    <div class="order-info-payment">
+                        <a href="#" class="order-info-payment-btn">Перейти к оплате</a>
+                        <span class="order-info-payment-total">Итого: <span id="order-price">0</span> руб.</span>
+                    </div>
+                </div>
+                <div class="product-cards">
+                    <div class="products">
+                        <img src="#" alt="products-img" width="200" height="200" class="products-img">
+                        <h3 class="products-caption"></h3>
+                        <p class="products-desc"></p>
+                        <button class="cart-link products-btn">в корзину</button>
+                        <details class="products-btn">
+                            <summary></summary>
+                        </details>
+                        <span class="products-price"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>Irakliy Kochlamazashvili 2018&copy;</p>
+    </footer>
+
+    <script src="script/cart.js"></script>
+</body>
+
+</html>

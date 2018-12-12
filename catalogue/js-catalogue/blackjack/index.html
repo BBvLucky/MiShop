@@ -1,94 +1,113 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>BlackJack</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
-<body>
-   <a class="back" href="../index.html">На "домашнюю"</a>
-    <script>
-    function getRandom(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-    
-    function getCard() {
-        var cards = ['6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
-        return cards[getRandom(0, cards.length - 1)];
-    }
-        
-    function getSum(arr) {
-        var sum = 0;
-        for (var i = 0; i < arr.length; i++) {
-            if (arr[i] == 'J' || arr[i] == 'Q' || arr[i] == 'K') {
-                sum += 10;
-            } else if (arr[i] == 'A') {
-                if (sum > 10) {
-                    sum += 1;
-                } else {
-                    sum += 11;
-                }
-            } else {
-                sum += +(arr[i]);
-            }
-        }
-        return sum;
-    }
-        
-    function getStatus() {
-        return 'Дилер: ' + dealer.join(' ') + ' Игрок: ' + player.join(' ') + '.';
-    }
-        
-    var dealer = [getCard()];
-    var player = [getCard()];
 
-    var answer = '';
-        
-    do {
-        answer = confirm(getStatus() + ' Хотите ещё карту?');
-        if (answer == true) {
-            player.push(getCard());
-            alert(getStatus() + ' Текущее число у игрока: ' + getSum(player));
-        }
-        else {
-            while (+getSum(dealer) < 17) {
-                dealer.push(getCard());
+<body>
+    <header class="header">
+        <a href="../index.html" class="menu-item">Домой</a>
+        <a href="#" class="menu-item">Black Jack (игра)</a>
+        <a href="../asteroids/index.html" class="menu-item">"Астероидиы" (игра)</a>
+        <a href="../snake/index.html" class="menu-item">"Змейка" (игра)</a>
+        <a href="../cart/index.html" class="menu-item">Каталог + корзина</a>
+    </header>
+    <main class="main">
+        <div class="content-description">
+            Простенькая игра без интерфейса на ES5.
+        </div>
+        <div class="content-wrapper">
+            <button class="start-button" onclick="startGame()">Запустить игру</button>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>Irakliy Kochlamazashvili 2018&copy;</p>
+    </footer>
+    <script>
+        function startGame() {
+            function getRandom(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
             }
-            
-            var sumDealer = +getSum(dealer);
-            var sumPlayer = +getSum(player);
-            
-            if (+sumDealer == 21) {
-                alert('У диллера Black Jack!' + getStatus());
+
+            function getCard() {
+                var cards = ['6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+                return cards[getRandom(0, cards.length - 1)];
             }
-                else if (+sumDealer > 21) {
-                    alert('У диллера перебор!' + getStatus());
-                    break;
+
+            function getSum(arr) {
+                var sum = 0;
+                for (var i = 0; i < arr.length; i++) {
+                    if (arr[i] == 'J' || arr[i] == 'Q' || arr[i] == 'K') {
+                        sum += 10;
+                    } else if (arr[i] == 'A') {
+                        if (sum > 10) {
+                            sum += 1;
+                        } else {
+                            sum += 11;
+                        }
+                    } else {
+                        sum += +(arr[i]);
+                    }
                 }
-                else if (+sumPlayer == sumDealer) {
-                    alert('Ничья!' + getStatus());
-                    break;
-                }
-                else if (+sumPlayer > sumDealer) {
-                    alert('Поздравляю! Вы выиграли!' + getStatus());
-                    break;
-                }
-                else {
-                    alert('Увы, Вы проиграли.' + getStatus());
-                    break;
-                }
+                return sum;
             }
-        
-        if (+getSum(player) == 21) {
-            alert('Поздравляю! Вы выиграли!');
-            break;
+
+            function getStatus() {
+                return 'Дилер: ' + dealer.join(' ') + ' Игрок: ' + player.join(' ') + '.';
+            }
+
+            var dealer = [getCard()];
+            var player = [getCard()];
+
+            var answer = '';
+
+            do {
+                answer = confirm(getStatus() + ' Хотите ещё карту?');
+                if (answer == true) {
+                    player.push(getCard());
+                    alert(getStatus() + ' Текущее число у игрока: ' + getSum(player));
+                } else {
+                    while (+getSum(dealer) < 17) {
+                        dealer.push(getCard());
+                    }
+
+                    var sumDealer = +getSum(dealer);
+                    var sumPlayer = +getSum(player);
+
+                    if (+sumDealer == 21) {
+                        alert('У диллера Black Jack!' + getStatus());
+                    } else if (+sumDealer > 21) {
+                        alert('У диллера перебор!' + getStatus());
+                        break;
+                    } else if (+sumPlayer == sumDealer) {
+                        alert('Ничья!' + getStatus());
+                        break;
+                    } else if (+sumPlayer > sumDealer) {
+                        alert('Поздравляю! Вы выиграли!' + getStatus());
+                        break;
+                    } else {
+                        alert('Увы, Вы проиграли.' + getStatus());
+                        break;
+                    }
+                }
+
+                if (+getSum(player) == 21) {
+                    alert('Поздравляю! Вы выиграли!');
+                    break;
+                } else if (+getSum(player) > 21) {
+                    alert('Увы, Вы проиграли.');
+                    break;
+                }
+
+            } while (answer == true);
         }
-        else if (+getSum(player) > 21) {
-            alert('Увы, Вы проиграли.');
-            break;
-        }
-        
-    } while(answer == true);
+
+        // var launchGame = document.getElementById('game-start');
+        // launchGame.onclick = startGame();
     </script>
 </body>
+
 </html>

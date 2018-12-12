@@ -1,0 +1,84 @@
+/*Глобальные стили*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f8f8;
+}
+
+a {
+    outline: none;
+}
+
+/*Шапка*/
+.header {
+    min-width: 1024px;
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    background-color: orange;
+    padding: 20px 0 20px 0;
+    justify-content: space-around;
+}
+
+.menu-item {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+
+.menu-item:hover {
+    color: darkorange;
+}
+
+.menu-item:active {
+    transform: scale(0.9);
+}
+
+/*Контент*/
+.main {
+    min-width: 1024px;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: white;
+    min-height: calc(100vh - 153px);
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.content-description {
+    margin-bottom: 20px;
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.start-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+.start-button:hover {
+    background-color: darkorange;
+}
+
+.start-button:active{
+    color: black;
+}
+
+/*Подвал*/
+.footer {
+    min-width: 1024px;
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    background-color: darkorange;
+    padding: 20px 0 20px 0;
+    justify-content: space-around;
+}
