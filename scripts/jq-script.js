@@ -26,7 +26,7 @@ $(document).ready(function () {
         $('.portfolio').toggleClass('portfolio-xpand');
         $(this).toggleClass('portfolio-show-more-hide');
         if ($(this).hasClass('portfolio-show-more-hide')) {
-            $(this).html('<p>скрыть</p>');
+            $(this).html('<a href="#portfolio" class="jq-anchor portfolio-show-more-link"><p>скрыть</p></a>');
         } else {
             $(this).html('<p>показать все</p>')
         }

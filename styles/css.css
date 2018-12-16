@@ -216,7 +216,7 @@ a {
   color: white;
 }
 .header-nav-link li a:hover {
-  color: rgba(0, 0, 0, 0.95);
+  color: rgba(0, 0, 0, 0.45);
 }
 @media (min-width: 1200px) {
   .header-nav-link li a {
@@ -262,6 +262,35 @@ a {
   line-height: 40px;
   font-size: 20px;
   font-weight: 700;
+}
+
+.desktop-up-btn {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .desktop-up-btn {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding: 0 10px 20px 10px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.45);
+    height: 100%;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .desktop-up-btn:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+    color: rgba(240, 240, 240, 0.6);
+  }
 }
 
 .portfolio {
@@ -403,6 +432,12 @@ a {
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: 300;
+}
+.portfolio-show-more-link {
+  display: block;
+  text-decoration: none;
+  color: #f0f0f0;
+  width: 100%;
 }
 .portfolio-xpand {
   height: auto;

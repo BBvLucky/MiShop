@@ -134,6 +134,13 @@
             text-transform: uppercase;
             font-weight: 300;
         }
+
+        &-link {
+            display: block;
+            text-decoration: none;
+            color: $color-text;
+            width: 100%;
+        }
     }
 
     &-xpand {
