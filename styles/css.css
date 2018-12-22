@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -265,31 +266,34 @@ a {
 }
 
 .desktop-up-btn {
-  display: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 0 10px 20px 10px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.45);
+  height: 100%;
+  text-decoration: none;
+  font-size: 14px;
 }
-@media (min-width: 1200px) {
+.desktop-up-btn:hover {
+  background-color: rgba(0, 0, 0, 0.35);
+  color: #f0f0f0;
+}
+@media (max-width: 1199.98px) {
   .desktop-up-btn {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    padding: 0 10px 20px 10px;
-    position: fixed;
-    right: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.05);
-    color: rgba(0, 0, 0, 0.45);
-    height: 100%;
-    text-decoration: none;
-    font-size: 14px;
-  }
-  .desktop-up-btn:hover {
-    background-color: rgba(0, 0, 0, 0.25);
-    color: rgba(240, 240, 240, 0.6);
+    display: none !important;
+    /*
+        только так работает плавное появление кнопки исключительно в десктопной версии
+    */
   }
 }
 
