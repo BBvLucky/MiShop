@@ -46,4 +46,15 @@ $(document).ready(function () {
     $('.skills-progressbar').each(function (i) {
         animProgress($('.skills-progressbar-bar').eq(i).text(), $(this))
     })
+
+    //Кнопка "наверх"
+    let $upBtn = $('.desktop-up-btn');
+    $upBtn.hide()
+    $(document).on('scroll', function() {
+        if ($(document).scrollTop() > 40) {
+            $upBtn.show(600);
+        } else {
+            $upBtn.hide(300)
+        } 
+    })
 })
