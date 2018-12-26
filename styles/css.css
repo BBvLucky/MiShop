@@ -574,6 +574,9 @@ a {
   text-align: right;
   line-height: 26px;
 }
+.skills-progressbar-bar:after {
+  content: '%';
+}
 
 .contacts {
   background-color: #20b2aa;
