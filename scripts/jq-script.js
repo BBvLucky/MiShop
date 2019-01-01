@@ -33,37 +33,44 @@ $(function () {
     })
 
     //Прогресс бар, инициализация ф-ции
-
     function animProgress(persent, $element) {
         $element.find('div').animate({
             width: persent + '%'
         }, 500);
     }
 
-   
-            
-
-    
     //Кнопка "наверх"
     let $upBtn = $('.desktop-up-btn');
     $upBtn.hide()
-    
-    //Запускаем несколько событий при скролле
-    $(document).on('scroll', function () {
-        
-        //скрыть/показать кнопку "наверх"
-        if ($(document).scrollTop() > 40) {
-            $upBtn.show(600);
-        } else {
-            $upBtn.hide(300)
-        }
-        
-        //запуск анимации прогрессбаров в разделе "навыки"
-        if ($(this).scrollTop() > $('#skills').offset().top - 600) {
-            //присваивание функции к каждому прогрессбару
-           $('.skills-progressbar').each(function (i) {
+
+    function progressAnim () {
+        $('.skills-progressbar').each(function (i) {
             animProgress($('.skills-progressbar-bar').eq(i).text(), $(this))
         })
+    }
+
+    //Проверяем ширину экрана пользователя и запускаем несколько событий при скролле
+    function onScrollFuncs() {
+        if ($(window).width() >= '1080') {
+            $(document).on('scroll', function () {
+
+                //скрыть/показать кнопку "наверх"
+                if ($(document).scrollTop() > 40) {
+                    $upBtn.show(600);
+                } else {
+                    $upBtn.hide(300)
+                }
+
+                //запуск анимации прогрессбаров в разделе "навыки"
+                if ($(document).scrollTop() > $('#skills').offset().top - 600) {
+                    //присваивание функции к каждому прогрессбару
+                    progressAnim()
+                }
+            })
+        } else if ($(window).width() < '1080') {
+            progressAnim()
         }
-    })
+    }
+
+    onScrollFuncs()
 })
