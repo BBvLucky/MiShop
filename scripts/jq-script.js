@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {
 
     //Выпадающее меню
     $('.header-nav-menu-btn').on('click', function () {
@@ -32,30 +32,38 @@ $(document).ready(function () {
         }
     })
 
-    //Прогресс бар
+    //Прогресс бар, инициализация ф-ции
 
     function animProgress(persent, $element) {
         $element.find('div').animate({
             width: persent + '%'
-        }, 500).html(persent);
+        }, 500);
     }
 
-    $(document).on('scroll', function () {
-        if ($(this).scrollTop() > $('#about').offset().top) {
-            $('.skills-progressbar').each(function (i) {
-                animProgress($('.skills-progressbar-bar').eq(i).text(), $(this))
-            })
-        }
-    })
+   
+            
 
+    
     //Кнопка "наверх"
     let $upBtn = $('.desktop-up-btn');
     $upBtn.hide()
+    
+    //Запускаем несколько событий при скролле
     $(document).on('scroll', function () {
+        
+        //скрыть/показать кнопку "наверх"
         if ($(document).scrollTop() > 40) {
             $upBtn.show(600);
         } else {
             $upBtn.hide(300)
+        }
+        
+        //запуск анимации прогрессбаров в разделе "навыки"
+        if ($(this).scrollTop() > $('#skills').offset().top - 600) {
+            //присваивание функции к каждому прогрессбару
+           $('.skills-progressbar').each(function (i) {
+            animProgress($('.skills-progressbar-bar').eq(i).text(), $(this))
+        })
         }
     })
 })
